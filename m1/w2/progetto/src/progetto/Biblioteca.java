@@ -1,12 +1,10 @@
 package progetto;
 
-import java.util.UUID;
-
 public abstract class Biblioteca {
 	
 
 
-	String codiceISBN = UUID.randomUUID().toString();
+	String codiceISBN;
 	String titolo;
 	int annoPubblicazione;
 	int numeroPagine;

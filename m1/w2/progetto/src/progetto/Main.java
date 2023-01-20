@@ -137,6 +137,19 @@ public class Main {
 		}
 		archivioLibri.add(new Libro(t1, anno, nPagine, autori.get(5), gen));
 		System.out.println(archivioLibri.toString());
+		//Scrivo dentro il file libri.txt tutto l'arrayList archivioLibri
+				try {
+					scriviArchivioLibri(archivioLibri);
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				try {
+					leggiArchivio(fileLibri);
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 		in.close();
 
 
