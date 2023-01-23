@@ -53,6 +53,7 @@ public class Main {
 			);
 	
 	public static void main(String[] args) {
+		
 		//Scrivo dentro il file libri.txt tutto l'arrayList archivioLibri
 		try {
 			scriviArchivioLibri(archivioLibri);
