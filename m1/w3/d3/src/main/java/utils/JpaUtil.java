@@ -6,6 +6,7 @@ import javax.persistence.Persistence;
 public class JpaUtil {
 
 	private static final EntityManagerFactory entityManagerFactory;
+	
 
 	static {
 		try {
@@ -22,7 +23,4 @@ public class JpaUtil {
 		return entityManagerFactory;
 	}
 
-	/*public static void closeEMF() {
-		entityManagerFactory.close();
-	}*/
 }

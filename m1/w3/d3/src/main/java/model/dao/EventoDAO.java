@@ -9,7 +9,7 @@ import javax.persistence.Query;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import gestione.eventi.Evento;
+import entity.Evento;
 import utils.JpaUtil;
 
 
@@ -81,6 +81,25 @@ public class EventoDAO {
 		} finally {
 			em.close();
 		}
+
+	}
+
+	private <T> List<T> executeNamedQuery(String namedQuery, Class<T> returnClass) {
+		EntityManager em = JpaUtil.getEntityManagerFactory().createEntityManager();
+		try {
+
+			Query query = em.createNamedQuery(namedQuery);
+
+			return query.getResultList();
+
+		} finally {
+			em.close();
+		}
+	}
+	
+	public List<Evento> getEventiSoldout(){
+		
+		return executeNamedQuery("eventiSoldout", Evento.class);
 
 	}
 
