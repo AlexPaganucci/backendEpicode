@@ -50,34 +50,34 @@ public class GestionePrenotazioniApplication implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
-//		Edificio edificio = (Edificio)ctxe.getBean("e");
-//		ed.insert(edificio);
-//		Edificio edificio2 = (Edificio)ctxe.getBean("e2");
-//		ed.insert(edificio2);
-//		Edificio edificio3 = (Edificio)ctxe.getBean("e3");
-//		ed.insert(edificio3);
-//		Postazione postazione = (Postazione)ctxp.getBean("p");
-//		postazione.setEdificio(edificio);
-//		pd.insert(postazione);
-//		Postazione postazione2 = (Postazione)ctxp.getBean("p2");
-//		postazione2.setEdificio(edificio2);
-//		pd.insert(postazione2);
-//		Postazione postazione3 = (Postazione)ctxp.getBean("p3");
-//		postazione3.setEdificio(edificio3);
-//		pd.insert(postazione3);
-//		Utente utente = (Utente)ctxu.getBean("u");
-//		ud.insert(utente);
-//		Utente utente2 = (Utente)ctxu.getBean("u2");
-//		ud.insert(utente2);
-//		Utente utente3 = (Utente)ctxu.getBean("u3");
-//		ud.insert(utente3);
-//		Utente utente4 = (Utente)ctxu.getBean("u4");
-//		ud.insert(utente4);
-//		Utente utente5 = (Utente)ctxu.getBean("u5");
-//		ud.insert(utente5);
-//		Utente utente6 = (Utente)ctxu.getBean("u6");
-//		ud.insert(utente6);
-//		creaPrenotazione(1, 1, LocalDate.now());
+		Edificio edificio = (Edificio)ctxe.getBean("e");
+		ed.insert(edificio);
+		Edificio edificio2 = (Edificio)ctxe.getBean("e2");
+		ed.insert(edificio2);
+		Edificio edificio3 = (Edificio)ctxe.getBean("e3");
+		ed.insert(edificio3);
+		Postazione postazione = (Postazione)ctxp.getBean("p");
+		postazione.setEdificio(edificio);
+		pd.insert(postazione);
+		Postazione postazione2 = (Postazione)ctxp.getBean("p2");
+		postazione2.setEdificio(edificio2);
+		pd.insert(postazione2);
+		Postazione postazione3 = (Postazione)ctxp.getBean("p3");
+		postazione3.setEdificio(edificio3);
+		pd.insert(postazione3);
+		Utente utente = (Utente)ctxu.getBean("u");
+		ud.insert(utente);
+		Utente utente2 = (Utente)ctxu.getBean("u2");
+		ud.insert(utente2);
+		Utente utente3 = (Utente)ctxu.getBean("u3");
+		ud.insert(utente3);
+		Utente utente4 = (Utente)ctxu.getBean("u4");
+		ud.insert(utente4);
+		Utente utente5 = (Utente)ctxu.getBean("u5");
+		ud.insert(utente5);
+		Utente utente6 = (Utente)ctxu.getBean("u6");
+		ud.insert(utente6);
+		creaPrenotazione(1, 1, LocalDate.now());
 		creaPrenotazione(2, 1, LocalDate.now());
 		
 		
