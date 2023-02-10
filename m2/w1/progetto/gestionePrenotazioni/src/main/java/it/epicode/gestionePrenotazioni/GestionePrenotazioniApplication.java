@@ -77,6 +77,7 @@ public class GestionePrenotazioniApplication implements CommandLineRunner{
 		Utente utente6 = (Utente)ctxu.getBean("u6");
 		ud.insert(utente6);
 		creaPrenotazione(1, 1, LocalDate.now());
+		creaPrenotazione(2, 1, LocalDate.now());
 		
 		
 		
@@ -102,10 +103,15 @@ public class GestionePrenotazioniApplication implements CommandLineRunner{
         Optional<Postazione> optionalPostazione = pd.getById(idPostazione);
         Utente utente = optionalUtente.orElseThrow(() -> new EntityNotFoundException("Utente non trovato con id: " + idUtente));
         Postazione postazione = optionalPostazione.orElseThrow(() -> new EntityNotFoundException("Postazione non trovata con id: " + idPostazione));
-
-        if (!postazioneDisponibile(postazione, data)) {
-            throw new IllegalStateException("La postazione non è disponibile per la data selezionata");
+        try {
+            if (!postazioneDisponibile(postazione, data)) {
+                throw new IllegalStateException("La postazione non è disponibile per la data selezionata");
+            }
+        }catch (IllegalStateException e) {
+            System.out.println("La postazione è piena, scegli un'altra postazione o un'altra data.");
+            return null;
         }
+
         if (!prenotazioneAttivaPerData(utente, data)) {
             throw new IllegalStateException("L'utente ha già una prenotazione attiva per questa data");
         }
