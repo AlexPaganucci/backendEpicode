@@ -2,7 +2,6 @@ package it.epicode.gestionePrenotazioni;
 
 import java.time.LocalDate;
 import java.util.Optional;
-import java.util.Scanner;
 
 import javax.persistence.EntityNotFoundException;
 
@@ -78,7 +77,6 @@ public class GestionePrenotazioniApplication implements CommandLineRunner{
 		Utente utente6 = (Utente)ctxu.getBean("u6");
 		ud.insert(utente6);
 		creaPrenotazione(1, 1, LocalDate.now());
-		creaPrenotazione(2, 1, LocalDate.now());
 		
 		
 		
@@ -90,7 +88,7 @@ public class GestionePrenotazioniApplication implements CommandLineRunner{
 	
     public boolean postazioneDisponibile(Postazione postazione, LocalDate data) {
         if (prd.countUtentiByPostazione(postazione) >= postazione.getNMaxOccupanti()) {
-            return false;
+        	throw new IllegalStateException("La postazione è piena non puoi fare la prenotazione!");
         }
         return prd.findByPostazioneAndData(postazione, data).isEmpty();
     } 
