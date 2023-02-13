@@ -78,6 +78,7 @@ public class GestionePrenotazioniApplication implements CommandLineRunner{
 		ud.insert(utente6);
 		creaPrenotazione(1, 1, LocalDate.now());
 		creaPrenotazione(2, 1, LocalDate.now());
+		creaPrenotazione(1, 2, LocalDate.now());
 		
 		
 		
