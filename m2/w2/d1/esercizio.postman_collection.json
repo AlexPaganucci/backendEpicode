@@ -254,8 +254,23 @@
 			"request": {
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "eve.holt@reqres.in",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pistol",
+							"type": "text"
+						}
+					]
+				},
 				"url": {
-					"raw": "https://reqres.in/api/register?email=eve.holt@reqres.in&password=pistol",
+					"raw": "https://reqres.in/api/register",
 					"protocol": "https",
 					"host": [
 						"reqres",
@@ -267,12 +282,14 @@
 					],
 					"query": [
 						{
-							"key": "email",
-							"value": "eve.holt@reqres.in"
+							"key": "",
+							"value": "",
+							"disabled": true
 						},
 						{
-							"key": "password",
-							"value": "pistol"
+							"key": "",
+							"value": "",
+							"disabled": true
 						}
 					]
 				}
@@ -284,8 +301,18 @@
 			"request": {
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "jkhafkhda@fahds",
+							"type": "text"
+						}
+					]
+				},
 				"url": {
-					"raw": "https://reqres.in/api/register?email=jkhafkhda@fahds",
+					"raw": "https://reqres.in/api/register",
 					"protocol": "https",
 					"host": [
 						"reqres",
@@ -297,8 +324,9 @@
 					],
 					"query": [
 						{
-							"key": "email",
-							"value": "jkhafkhda@fahds"
+							"key": "",
+							"value": "",
+							"disabled": true
 						}
 					]
 				}
@@ -310,8 +338,23 @@
 			"request": {
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "eve.holt@reqres.in",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "cityslicka",
+							"type": "text"
+						}
+					]
+				},
 				"url": {
-					"raw": "https://reqres.in/api/login?email=eve.holt@reqres.in&password=cityslicka",
+					"raw": "https://reqres.in/api/login",
 					"protocol": "https",
 					"host": [
 						"reqres",
@@ -323,12 +366,14 @@
 					],
 					"query": [
 						{
-							"key": "email",
-							"value": "eve.holt@reqres.in"
+							"key": "",
+							"value": "",
+							"disabled": true
 						},
 						{
-							"key": "password",
-							"value": "cityslicka"
+							"key": "",
+							"value": "",
+							"disabled": true
 						}
 					]
 				}
@@ -340,8 +385,18 @@
 			"request": {
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "peter@klaven",
+							"type": "text"
+						}
+					]
+				},
 				"url": {
-					"raw": "https://reqres.in/api/login?email=peter@klaven",
+					"raw": "https://reqres.in/api/login",
 					"protocol": "https",
 					"host": [
 						"reqres",
@@ -353,8 +408,9 @@
 					],
 					"query": [
 						{
-							"key": "email",
-							"value": "peter@klaven"
+							"key": "",
+							"value": "",
+							"disabled": true
 						}
 					]
 				}
