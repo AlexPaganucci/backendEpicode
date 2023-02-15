@@ -4,6 +4,9 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import it.epicode.be.prenotazioni.model.User;
@@ -30,5 +33,10 @@ public class UtenteService {
     public boolean deleteById(Long id) {
         userRepo.deleteById(id);
         return true;
+    }
+    
+    public Page<User> getUtente(int pageNumber, int pageSize) {
+        Pageable pageable = PageRequest.of(pageNumber, pageSize);
+        return userRepo.findAll(pageable);
     }
 }
