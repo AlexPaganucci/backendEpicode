@@ -17,7 +17,7 @@ public interface BookingRepository extends JpaRepository<Booking, Long> {
 	int countBookingsByDateAndWorkStation(@Param("d") LocalDate d, @Param("i") Long i);
 	
 	@Query(nativeQuery = true, value = "SELECT * FROM bookings WHERE date = :d AND user_id = :i")
-	List<Booking> findBookingsByDateAndUser(@Param("d") LocalDate d, @Param("i") Long i);
+	List<Booking> findBookingsByDateAndUser(@Param("d") LocalDate d, @Param("i") int i);
 	
 
 }

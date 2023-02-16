@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -60,15 +61,34 @@ public class BookingManagementApplication implements CommandLineRunner {
 			add(r1);
 			add(r2);
 		}});
+		u1.setPassword("ciao");
+		u1.setActive(true);
 		rS.saveRole(r1);
 		rS.saveRole(r2);
 		uS.saveUser(u1);
 		
+		getRolesFromUserById(1);
 //		getInitialData();
 //		mainMenu();
 		
 		
 		((AnnotationConfigApplicationContext)ctx).close();
+	}
+	
+	private void getRolesFromUserById(int id) {
+		Optional<User> authUserObj = uS.getUserById(id);
+		User authUser = authUserObj.get();
+		String role = "USER";
+		Set<Role> roles = authUser.getRoles();
+		
+		for( Role r : roles ) {
+			if( r.getType().toString().contains("ADMIN") ) {
+				role = "ADMIN";
+				break;
+			}
+		}
+		
+		System.out.println(role);
 	}
 	
 	public City save(String n) {

@@ -31,7 +31,7 @@ public class UserService {
 		return uR.save(u);
 	}
 	
-	public Optional<User> getUserById(Long id) {
+	public Optional<User> getUserById(int id) {
 		return uR.findById(id);
 	}
 	
@@ -51,7 +51,7 @@ public class UserService {
 		return uR.findExistingUser(u, f, e);
 	}
 	
-	public void deleteUserById(Long id) {
+	public void deleteUserById(int id) {
 		uR.deleteById(id);
 	}
 	

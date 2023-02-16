@@ -46,7 +46,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter{
     
 	@Override
 	protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
-		Optional<User> authUserObj = userSrv.getUserById((long) 1);
+		Optional<User> authUserObj = userSrv.getUserById(1);
 		User authUser = authUserObj.get();
 		String role = "USER";
 		Set<Role> roles = authUser.getRoles();

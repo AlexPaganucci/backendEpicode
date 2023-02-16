@@ -62,8 +62,8 @@ public class BookingService {
 		return bR.countBookingsByDateAndWorkStation(d, id);
 	}	
 	
-	public List<Booking> findBookingsByDateAndUserId(LocalDate d, Long id) {
-		return bR.findBookingsByDateAndUser(d, id);
+	public List<Booking> findBookingsByDateAndUserId(LocalDate d, int i) {
+		return bR.findBookingsByDateAndUser(d, i);
 	}
 	
 	public Optional<Booking> getBookingById(Long id) {
