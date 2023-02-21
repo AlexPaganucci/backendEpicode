@@ -1,5 +1,7 @@
 package it.epicode.pw.gestione_dispositivi.models;
 
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -19,9 +21,9 @@ import lombok.Setter;
 @Table(name = "ruoli")
 @Getter
 @Setter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 public class Ruolo {
 
 	@Id

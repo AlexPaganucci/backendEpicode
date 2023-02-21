@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w3d4</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        #btn{
+            color: white;
+            background-color: black;
+            border-radius: 10%;
+            cursor: pointer;
+            padding: 10px;
+            display: block;
+            margin: 0 auto;
+        }
+        ul li{
+            list-style-type: none;
+            padding-block: 10px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Persone</h1>
+    <button id="btn">Show</button>
+    <div>
+        <ul id="lista"></ul>
+    </div>
+
+    <script>
+        const btn = document.getElementById("btn");
+        const lista = document.getElementById("lista")
+        btn.addEventListener("click", () => {
+            fetch('http://localhost:8081/os/get-people-json')
+            .then((response) => response.json())
+            .then((data) => {console.log(data)
+                lista.innerHTML = "";
+                data.forEach((element) => {
+                lista.innerHTML += `<li>Nome completo: ${element.fullname}, username: ${element.username}, gender: ${element.gender}</li>`
+            });
+            })
+        })
+    </script>
+</body>
+</html>
