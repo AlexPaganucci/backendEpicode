@@ -31,6 +31,8 @@ public class Main {
         sonda2.setSmokeLevel(8);
         
         sonda1.setSmokeLevel(8);
+        
+        sonda2.setSmokeLevel(5.5);
 	}
 
 }
